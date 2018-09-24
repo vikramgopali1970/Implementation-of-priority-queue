@@ -2,6 +2,12 @@
 // Changed signature of heapSort changing <T> to <T extends Comparable<? super T>>
 // poll returns null if pq is empty (not false)
 
+/**
+ * Team Members :
+ * Vikram Gopali (netId : vxg180002)
+ * Sreeram Chittela (netId : sxc180025)
+ * */
+
 package vxg180002;
 import java.util.Comparator;
 import java.util.Iterator;
@@ -20,7 +26,6 @@ public class BinaryHeap<T extends Comparable<? super T>> {
 
     // Constructor for building an empty priority queue with custom comparator
     public BinaryHeap(T[] q, Comparator<T> c) {
-        System.out.println("hereeeeeee ");
         pq = q;
         comp = c;
         this.size = q.length;
@@ -32,7 +37,6 @@ public class BinaryHeap<T extends Comparable<? super T>> {
      *  Implement this if solving optional problem.  To be called from heap sort.
      */
     private BinaryHeap(T[] q, Comparator<T> c, int n) {
-        System.out.println("this contructor with T[] q, Comparator<T> c, int n argumennt");
         pq = q;
         comp = c;
         // You need to add more code here to build queue
@@ -126,7 +130,7 @@ public class BinaryHeap<T extends Comparable<? super T>> {
         {
             System.out.println(pq[x]);
         }
-        System.out.println("Priority queue size is now "+size);
+        System.out.println("Priority queue size is now "+this.size);
     }
 
     int parent(int i) {
